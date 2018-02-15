@@ -1,6 +1,8 @@
 # ember-cli-animate-shim
 
-This ember-cli addon simplifies integration of animate.css with ember-cli apps.
+This ember-cli addon simplifies integration of [animate.css](https://github.com/daneden/animate.css) with ember-cli apps.
+
+See the animations in action [here](https://smashweaver.github.io/ember-cli-animate-shim/).
 
 ## Installation
 ```
@@ -9,7 +11,33 @@ ember install ember-cli-animate-shim
 
 ## Usage
 
-- By default, all available animations will be included unless otherwise specified in your app's  *ember-cli-build.js* like so:
+- By default, all available animations will be included:
+
+|                   |                    |                     |                      |
+| ----------------- | ------------------ | ------------------- | -------------------- |
+| `bounce`          | `flash`            | `pulse`             | `rubberBand`         |
+| `shake`           | `headShake`        | `swing`             | `tada`               |
+| `wobble`          | `jello`            | `bounceIn`          | `bounceInDown`       |
+| `bounceInLeft`    | `bounceInRight`    | `bounceInUp`        | `bounceOut`          |
+| `bounceOutDown`   | `bounceOutLeft`    | `bounceOutRight`    | `bounceOutUp`        |
+| `fadeIn`          | `fadeInDown`       | `fadeInDownBig`     | `fadeInLeft`         |
+| `fadeInLeftBig`   | `fadeInRight`      | `fadeInRightBig`    | `fadeInUp`           |
+| `fadeInUpBig`     | `fadeOut`          | `fadeOutDown`       | `fadeOutDownBig`     |
+| `fadeOutLeft`     | `fadeOutLeftBig`   | `fadeOutRight`      | `fadeOutRightBig`    |
+| `fadeOutUp`       | `fadeOutUpBig`     | `flipInX`           | `flipInY`            |
+| `flipOutX`        | `flipOutY`         | `lightSpeedIn`      | `lightSpeedOut`      |
+| `rotateIn`        | `rotateInDownLeft` | `rotateInDownRight` | `rotateInUpLeft`     |
+| `rotateInUpRight` | `rotateOut`        | `rotateOutDownLeft` | `rotateOutDownRight` |
+| `rotateOutUpLeft` | `rotateOutUpRight` | `hinge`             | `jackInTheBox`       |
+| `rollIn`          | `rollOut`          | `zoomIn`            | `zoomInDown`         |
+| `zoomInLeft`      | `zoomInRight`      | `zoomInUp`          | `zoomOut`            |
+| `zoomOutDown`     | `zoomOutLeft`      | `zoomOutRight`      | `zoomOutUp`          |
+| `slideInDown`     | `slideInLeft`      | `slideInRight`      | `slideInUp`          |
+| `slideOutDown`    | `slideOutLeft`     | `slideOutRight`     | `slideOutUp`         |
+
+
+- Or specify the animations you need in your app's *ember-cli-build.js* like so:
+
 ```
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -21,6 +49,8 @@ module.exports = function(defaults) {
   return app.toTree();
 };
 ```
+
+## Examples
 
 - Animate by mixin
 
